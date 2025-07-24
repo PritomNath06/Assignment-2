@@ -112,42 +112,39 @@ body{
 
 .join-content button:hover {
     background-color: #d1320a;
+    
 }
 
 /* Plant Lover Section */
 
-.plant-lover-section{
-    text-align: left;
-    display: left;
-    padding: 40px 80px;
+.lover-section {
+    background-image: url(images/deal-bloom.png);
+    background-size: 300px 300px;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.side-image {
+    display: grid;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
     margin: 20px;
-    gap: 20px;
 }
 
-.plant-lover-content{
-    width: 100%;
-    padding: 10px;
-    height: auto;
-    display: block;
+
+
+.plant-lover-content {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 20px;
+    flex-direction: row;
 }
 
-.plant-lover-content img {
-    width: 40%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
+/* Navigation bar*/
 
-.overlay {
-    position: relative;
-    width: 40%;
-    height: 40%;
-    border-radius: 10px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.overlay h3 {
-    font-family: 
-    position: relative;
-}
