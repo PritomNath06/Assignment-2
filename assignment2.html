@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,78 +8,424 @@
     <title>Assignment 2</title>
 
     <style>
-    
-    .side-image {
+        @media screen and (min-width: 428px) and (max-width: 926px) {
+
+    .nav {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    .logo {
+        order: 1;
+        margin-right: auto;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .search-cart {
+        order: 2;
+        margin-left: auto;
+        display: flex;
+        align-items: flex-start; /* Move icon up */
+        height: 100%;
+    }
+
+    .search-cart .search-icon {
+        display: block;
+        align-self: flex-start; /* Move icon up */
+        margin-top: -70px; /* Remove any default margin */
+    }
+
+    .search-cart li {
+        display: none;
+    }
+
+    .head_banner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .head_banner_image {
+        order: 1; /* Move image above the title */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .head_banner_title {
+    position: relative;
+    left: 0;
+    }
+
+    .head_banner_title {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 0;    /* Remove padding */
+        margin-left: 0;     /* Remove margin */
+        left: 0;            /* Ensure it's at the left edge */
+        width: 100%;
+    }
+
+    .head_banner_title h1 {
+        margin-bottom: 10px;
+        padding-left: 0;    /* Remove any padding from h1 */
+        margin-left: 0;     /* Remove any margin from h1 */
+    }
+
+    .head_banner_title p {
+        margin-top: 0;
+        width: 100%;
+        padding-left: 0;    /* Remove any padding from p */
+        margin-left: 0;     /* Remove any margin from p */
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align heading to the left */
+        text-align: center;
+        margin-top: 20px; /* Space below plant banner section */
+        padding-left: 20px; /* Move content to the left */
+    }
+
+    .banner h1 {
+        margin-bottom: 10px;
+        display: flex;
+        font-size: xx-large;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .banner p {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .join-section {
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    .join-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .join-content input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .join-content button {
+        width: 100%;
+    }
+
+    .plant-lover-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-image {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .overlay {
+        position: static;
+        transform: none;
+    }
+
+    .plant-banner-card,
+    .card-first,
+    .card-second {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .plant-card-section button {
+        width: 90%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    .badge-container {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .store-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .badgde-logo {
+        position: static;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .badge-text {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .badge-text h1 {
+        font-size: 28px;
+    }
+
+    .deal {
+        padding: 30px 10px;
+    }
+
+    .latest-deal {
+        font-size: 28px;
+    }
+
+    .deal-box {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    .footer-box {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
     </style>
-        
+
 </head>
 
-
 <body>
-    <nav class="nav">
-
-
-    </nav>
-    
-    <main>
-
-    </main>
-
-    <section class="plant-section">
-        <h1>Welcome to Our Flower Shop</h1>
-    <section>
-
-
-    <!----Plant Lover Section-->
-
-    <section class="lover-section">
-        <div class="lover-content">
-            <h2>60% off | Bloom Plant</h2>
-            <a href="#"><button>Shop Now</button></a>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
             </div>
-    </section>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+                <div class="search-cart">
+                    <img src="images/shopping-cart-icon.png" alt="Search Icon" class="search-icon">
+                    <li><a href="#">Cart($56)</a></li>
+                </div>
+        </nav>
+
+        <!----Plant Banner Section-->
+        <div class="head_banner">
+            <div class="head_banner_title">
+                <h1><span style="color: black;">ALWAYS</span> <span style="color: red;">FRESH</span></h1>
+                    <h1 style="color: red;">FLOWERS</h1>
+                    <p>
+                        Indulge your senses with the 
+                        beauty and fragrance of our fresh 
+                        flower shop.
+                            From classic roses to exotic 
+                        blooms, we offer a wide variety of 
+                        fresh flowers 
+                            that are perfect for any 
+                        occasion
+                    </p>
+            </div>
+                <div class="head_banner_image">
+                    <img src="images/hero-flower.png" alt="headflower"/>
+                </div>
+        </div>
+
+        <!----Plant Banner Title Section-->
+
+        <main class="banner">
+            <h1><span style="color: #E95A08;">Our</span> Plants </h1>
+            <div>
+                <p>Indulge your senses with the beauty and fragrance of our fresh flower shop.<br>From classic roses to
+                    exotic blooms, we offer a wide variety of fresh.</p>
+            </div>
+        </main>
+
+
+        <!----Plant Banner card Section-->
+
+        <section class="plant-card-section">
+            <div class="card-first">
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 1">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 2">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 3">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 4">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="card-second">
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 5">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 6">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 7">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="card">
+                    <img src="images/sample-flower-image.png" alt="Plant 8">
+                    <h2>Lily Blossom</h2>
+                    <p>20 USD</p>
+                    <button>BUY NOW</button>
+                </div>
+            </div>
+        </section>
+        <!----Plant Badge Section-->
+
+        <section>
+            <div class="badge-container">
+                <div class="badgde-image">
+                    <img src="images/flower-store.png" alt="store image" class="store-image">
+                </div>
+                <div class="badge-text">
+                    <h1>Flower & Plants
+                        <br>Lover
+                    </h1>
+                    <ul>
+                        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
+                            roses to exotic blooms, we offer a wide variety of fresh.</li>
+                        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
+                            roses to exotic blooms, we offer a wide variety of fresh.</li>
+                        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
+                            roses to exotic blooms, we offer a wide variety of fresh.</li>
+                    </ul>
+                </div>
+                <img src="images/trusted-badge.png" alt="Badge" class="badgde-logo">
+            </div>
+        </section>
+
+        <!----Latest Deal Section-->
+        <section>
+            <div class="deal">
+                <h1 class="latest-deal"><span style="color: red;">LATEST</span> <span style="color: black;">DEALS</span>
+                </h1>
+
+                <div class="deal-box">
+                    Indulge your senses with the beauty and fragrance of our fresh flower shop.
+                    <br>
+                    From classic roses to exotic blooms, we offer a wide variety of fresh.
+                </div>
+            </div>
+        </section>
+
+
+        <!----Plant Lover Section-->
+
+        <section class="plant-lover-section">
+            <div class="overlay">
+                <div class="box-image">
+                    <img src="images/deal-bloom.png" alt="plant-1">
+                    <h3>60% Off | Bloom Plant</h3>
+                    <button>Shop Now</button>
+                </div>
+                <div class="box-image">
+                    <img src="images/deal-ana.png" alt="plant-2">
+                    <h3>20% Off | Deal Ana Plant</h3>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+            <div class="overlay">
+                <img src="images/deal-zabo.png" alt="Plant-3" class="zabo-image" id="last-plant">
+                <h3>20% Off | Deal Zabo Plant</h3>
+                <button>Shop Now</button>
+            </div>
+        </section>
+    </div>
 
     <!----Plant joining section-->
-
     <section class="join-section">
         <div class="join-content">
-            <h1>Join the colorful Bunch</h1>
-            <input type="text" placeholder="Write email">
+            <h1>JOIN THE COLORFUL BUNCH</h1>
+            <input type="email" placeholder="Write email" required>
             <button>Submit</button>
-            </div>
+        </div>
     </section>
 
     <!----footer Section-->
 
-        <footer class="footer-box">
-                <div>
-                    <img src="images/logo.png" alt="Flower Shop Logo" class="footer-logo">
-                    <p>Indulge your senses with the<br>beauty and fragnance of our fresh<br>flower shop.</p>
-                </div>
+    <footer class="footer-box container">
+        <div>
+            <img src="images/logo.png" alt="Flower Shop Logo" class="footer-logo">
+            <p>Indulge your senses with the<br>beauty and fragnance of our fresh<br>flower shop.</p>
+        </div>
 
-                <ul class="footer-list-1">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <ul class="footer-list-2">
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
+        <ul class="footer-list-1">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="footer-list-2">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Help Center</a></li>
+        </ul>
 
-                <div class="footer-social">
-                    <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/icon-youtube.png" alt="Youtube"></a>
-                    <a href="#"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
-            </div>
-            </footer>
-        </body>
-        </html>
+        <div class="footer-social">
+            <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/icon-youtube.png" alt="Youtube"></a>
+            <a href="#"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </footer>
+</body>
+</html>
